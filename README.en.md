@@ -28,6 +28,6 @@ If you wish to contribute to the project, feel free to check our contribution gu
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-1
+
 ---
 Thank you for your interest and support in qblocks-weapp! If you have any questions or suggestions, please don't hesitate to contact us. We welcome contributions to make this project even better!
