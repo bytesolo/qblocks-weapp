@@ -1,36 +1,33 @@
 # qblocks-weapp
 
-#### Description
-qblocks-weapp是一个微信小程序版的快速积木式 UI 组件库。"qblocks" 意为 "quick blocks"，旨在帮助您快速搭建漂亮且高效的小程序界面。该库提供常用的 UI 布局组件，可通过简单配置和组合实现快速构建界面。
+## Project Overview
 
-#### Software Architecture
-Software architecture description
+qblocks-weapp is a fast and modular UI component library for WeChat Mini Programs. It aims to help developers quickly build beautiful and efficient user interfaces for their Mini Programs. The name "qblocks" stands for "quick blocks," signifying the ease of use and simplicity, just like building with blocks.
 
-#### Installation
+## Key Features
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+- Rapid Prototyping: qblocks-weapp provides a set of commonly used UI layout components that can be quickly combined and configured for rapid prototyping of Mini Program interfaces.
+- Flexible Customization: While being a modular component library, qblocks-weapp also offers rich customization options to meet various styling needs.
+- Easy Integration: The components in qblocks-weapp are highly compatible and can be easily integrated into your existing Mini Program projects.
+- Regular Maintenance: We regularly update and maintain qblocks-weapp to ensure component stability and feature enhancements.
 
-#### Instructions
+Please note that although the project name suggests a "component library," qblocks-weapp is not a complete library but rather provides commonly used UI layout components for fast Mini Program interface construction. We encourage developers to customize and extend it according to their specific requirements.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Example Screenshot
 
-#### Contribution
+Insert your example screenshot here.
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+## Installation and Usage
 
+Provide detailed installation and usage instructions here, including the installation of dependencies and configurations. If necessary, you can also include some code examples or demonstrations.
 
-#### Gitee Feature
+## Contribution Guidelines
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+If you wish to contribute to the project, feel free to check our contribution guidelines and process here. It covers reporting issues, suggesting improvements, and submitting code contributions.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+Thank you for your interest and support in qblocks-weapp! If you have any questions or suggestions, please don't hesitate to contact us. We welcome contributions to make this project even better!
