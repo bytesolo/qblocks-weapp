@@ -1,0 +1,5 @@
+/* components/qb-gridnav/index.wxss */
+.gridnav {
+  display: flex;
+  flex-direction: row;
+}

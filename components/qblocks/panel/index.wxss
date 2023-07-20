@@ -1,0 +1,26 @@
+/* components/qb-panel/index.wxss */
+.qb-panel {
+  margin: 24rpx;
+  padding: 16rpx;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.qb-panel__top {
+  display: flex;
+  padding: 16rpx;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.qb-panel__title {
+  font-weight: 600;
+}
+
+.qb-panel__operation {}
+
+.qb-panel__content {
+  padding: 16rpx;
+  display: flex;
+  flex-direction: row;
+}

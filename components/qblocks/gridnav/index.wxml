@@ -1,0 +1,6 @@
+<!--components/qb-gridnav/index.wxml-->
+<view class="gridnav">
+  <view wx:for="{{navlist}}" wx:key="id" class="navitem">
+    asd
+  </view>
+</view>

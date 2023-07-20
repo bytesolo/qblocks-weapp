@@ -1,0 +1,2 @@
+<!--components/qb-pagetitle/index.wxml-->
+<view class="qb-pagetitle">{{text}}</view>

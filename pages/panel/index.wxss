@@ -1,0 +1,10 @@
+/* pages/panel/index.wxss */
+
+.panel1__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 16rpx 0;
+}

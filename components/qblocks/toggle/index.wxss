@@ -1,0 +1,21 @@
+/* components/qblocks/togglebutton/index.wxss */
+.qb-toggle {
+  flex: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qb-toggle__icon {
+  background-color: rgb(97, 187, 181);
+  padding: 24rpx;
+  border-radius: 50%;
+}
+
+.qb-toggle__text {
+  margin-top: 16rpx;
+  font-size: small;
+  color: rgb(97, 187, 181);
+}

@@ -1,0 +1,10 @@
+<!--pages/panel/index.wxml-->
+<qb-pagetitle text="Panel 面板"></qb-pagetitle>
+<qb-panel title="模式">
+  <view slot="content" class="panel1__content">
+      <qb-icontoggle text="模式1"/>
+      <qb-icontoggle text="模式2"/>
+      <qb-icontoggle text="模式2"/>
+      <qb-toggle text="模式3"/>
+  </view>
+</qb-panel>

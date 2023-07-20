@@ -1,0 +1,8 @@
+/* components/qb-pagetitle/index.wxss */
+.qb-pagetitle {
+  margin: 32rpx;
+  font-size: 48rpx;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}

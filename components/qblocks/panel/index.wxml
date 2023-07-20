@@ -1,0 +1,10 @@
+<!--components/qb-panel/index.wxml-->
+<view class="qb-panel">
+  <view class="qb-panel__top">
+    <text class="qb-panel__title">{{title}}</text>
+    <view class="operation">按钮</view>
+  </view>
+  <view class="qb-panel__content">
+    <slot name="content"/>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/gridnav/index.wxml-->
+<qb-gridnav navlist="{{[1,2,3]}}"></qb-gridnav>

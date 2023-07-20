@@ -1,23 +1,65 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+  <view class="project-info">
+      <view class="row1">
+        <image src="https://i.imgtg.com/2023/07/20/OFE3pi.png" class="logo" mode="aspectFit"/>
+        <text class="title">QBlocks Weapp</text>
       </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+      <text class="desc"> "qblocks" 源自 "quick blocks"，寓意着通过这个工具能够快速构建小程序界面，就像搭积木一样简单。</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <van-cell-group title="组件/UI块" inset>
+    <van-cell
+      is-link
+      size="large"
+      title="Panel 面板"
+      link-type="navigateTo"
+      url="/pages/panel/index"
+    />
+    <van-cell
+      is-link
+      size="large"
+      title="GridNav 网格导航"
+      link-type="navigateTo"
+      url="/pages/gridnav/index"
+    />
+    <van-cell
+      is-link
+      size="large"
+      title="Toggle 切换按钮"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </van-cell-group>
+  <van-cell-group title="装饰" inset>
+    <van-cell
+      is-link
+      size="large"
+      title="CardBackground卡片背景"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      size="large"
+      title="工作台"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </van-cell-group>
+  <van-cell-group wx:for="{10}}" title="常用页面" inset>
+    <van-cell
+      is-link
+      title="我的"
+      size="large"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="工作台"
+      size="large"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </van-cell-group>
 </view>

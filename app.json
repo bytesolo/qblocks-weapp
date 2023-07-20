@@ -1,14 +1,30 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/gridnav/index",
+    "pages/panel/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "QBlocks Weapp",
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "demo-block": "./components/demo-block/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index",
+
+    "qb-pagetitle": "./components/qblocks/pagetitle/index",
+    "qb-panel": "./components/qblocks/panel/index",
+    "qb-gridnav": "./components/qblocks/gridnav/index",
+    "qb-icontoggle": "./components/qblocks/icontoggle/index",
+    "qb-toggle": "./components/qblocks/toggle/index",
+    "qb-toggle-group": "./components/qblocks/toggle-group/index"
+  },
   "sitemapLocation": "sitemap.json"
 }

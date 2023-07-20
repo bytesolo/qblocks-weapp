@@ -1,19 +1,33 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
-}
+.container {}
 
-.userinfo-avatar {
+.project-info {
+  padding: 32rpx 32rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
   overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
 }
 
-.usermotto {
-  margin-top: 200px;
+.row1 {
+  display: flex;
+  flex-direction: row;
+  margin: 16rpx 64rpx;
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.title {
+  line-height: 120rpx;
+  font-size: 50rpx;
+  font-weight: 600;
+  margin-left: 16rpx;
+}
+
+.desc {
+  display: block;
+  margin: 32rpx 80rpx;
+  color: rgba(69, 90, 100, 0.6);
 }
