@@ -1,7 +1,7 @@
 <!--components/qblocks/togglebutton/index.wxml-->
-<view class="qb-toggle">
-  <van-icon class="qb-toggle__icon" name="setting-o" size="48rpx" color="#fff" />
-  <view class="qb-toggle__text">
+<view class="qb-icontoggle">
+  <van-icon class="qb-icontoggle__icon" name="setting-o" size="48rpx" color="#fff" />
+  <view class="qb-icontoggle__text">
     直吹风
   </view>
 </view>

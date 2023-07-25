@@ -1,0 +1,6 @@
+<!--pages/toggle/index.wxml-->
+<qb-toggle-group>
+  <qb-toggle></qb-toggle>
+  <qb-toggle></qb-toggle>
+  <qb-toggle></qb-toggle>
+</qb-toggle-group>

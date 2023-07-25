@@ -1,21 +1,26 @@
 /* components/qblocks/togglebutton/index.wxss */
 .qb-toggle {
-  flex: 0;
-  justify-content: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  color: rgb(97, 187, 181);
   align-items: center;
+  padding: 12rpx 24rpx;
+  border: rgb(97, 187, 181) 1px solid;
+  border-radius: 32rpx;
+  overflow: hidden;
 }
 
-.qb-toggle__icon {
+.qb-toggle__selected {
   background-color: rgb(97, 187, 181);
-  padding: 24rpx;
-  border-radius: 50%;
+  color: white;
 }
+
+.qb-toggle__icon {}
 
 .qb-toggle__text {
-  margin-top: 16rpx;
+  margin-left: 8rpx;
   font-size: small;
-  color: rgb(97, 187, 181);
+  line-height: auto;
+  /* 让文字和图标更好对齐 */
+  margin-bottom: 2rpx;
 }

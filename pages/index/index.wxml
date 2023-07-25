@@ -27,14 +27,14 @@
       size="large"
       title="Toggle 切换按钮"
       link-type="navigateTo"
-      url="/pages/dashboard/index"
+      url="/pages/toggle/index"
     />
   </van-cell-group>
   <van-cell-group title="装饰" inset>
     <van-cell
       is-link
       size="large"
-      title="CardBackground卡片背景"
+      title="Background背景"
       link-type="navigateTo"
       url="/pages/dashboard/index"
     />

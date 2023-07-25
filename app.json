@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/gridnav/index",
-    "pages/panel/index"
+    "pages/panel/index",
+    "pages/toggle/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,7 +19,6 @@
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-button": "@vant/weapp/button/index",
-
     "qb-pagetitle": "./components/qblocks/pagetitle/index",
     "qb-panel": "./components/qblocks/panel/index",
     "qb-gridnav": "./components/qblocks/gridnav/index",

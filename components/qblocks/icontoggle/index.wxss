@@ -1,17 +1,17 @@
 /* components/qblocks/togglebutton/index.wxss */
-.qb-toggle {
+.qb-icontoggle {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.qb-toggle__icon {
+.qb-icontoggle__icon {
   background-color: rgb(97, 187, 181);
   padding: 24rpx;
   border-radius: 50%;
 }
 
-.qb-toggle__text {
+.qb-icontoggle__text {
   margin-top: 16rpx;
   font-size: small;
   color: rgb(97, 187, 181);
