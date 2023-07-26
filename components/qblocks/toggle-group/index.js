@@ -4,22 +4,31 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    selectedItemId: String
+    value: {
+      type: Array,
+      value: [],
+      observer: 'updateChildren'
+    },
+    multiple: Boolean
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    toggle: 1,
     children: []
   },
   relations: {
     '../toggle/index': {
       type: 'child', // 子组件的关联类型，即是子组件
+      // 子组件关联时触发
       linked(target) {
-        // 子组件关联时触发
-        console.log('Linked to child component', target);
+        if (this.data.value.indexOf(target.data.name) > -1) {
+          target.setData({
+            selected: true
+          });
+        }
+        // console.log('Linked to child component', target);
       },
       unlinked(target) {
         // 子组件取消关联时触发
@@ -31,23 +40,76 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onChange(event) {
-      console.log('onChange');
-      const name = event.detail.name;
-      console.log(event);
-      this.data.radios.forEach((item) => {
-        item.checked = item.name === name;
+    // onChildrenChanged(event){
+    //   this.onChange(event);
+    // },
+    updateChildren(newVal, oldVal) {
+      // console.log(this.data.multiple)
+      // console.log('updateChildren', newVal, oldVal);
+
+      this.data.children.forEach((child) => {
+        if (newVal.indexOf(child.data.name) > -1) {
+          child.setData({
+            selected: true
+          });
+        }
+      });
+    },
+    onChildChange(child) {
+      // console.log('onChildChange', child);
+      if (!this.data.multiple) {
+        // 非多选状态下unselect除当前标签以外的其他标签
+        this.data.children.forEach((c) => {
+          if (c != child) {
+            c.setData({
+              selected: false
+            });
+          }
+        });
+      }
+      this.syncChildren();
+      this.triggerEvent("change", {
+        value: this.data.value
+      });
+      // const name = event.detail.name;
+      // console.log(event);
+      // this.data.radios.forEach((item) => {
+      //   item.checked = item.name === name;
+      // });
+      // this.setData({
+      //   radios: this.data.radios
+      // });
+      // this.triggerEvent('change', {
+      //   value: name
+      // });
+    },
+    syncChildSelected() {
+      console.log('syncChildSelected');
+    },
+    // 同步数据和组件
+    syncChildren() {
+      const children = this.getRelationNodes('../toggle/index');
+      const value = [];
+      children.forEach((child) => {
+        if (child.data.selected) {
+          value.push(child.data.name);
+        }
       });
       this.setData({
-        radios: this.data.radios
+        children,
+        value
       });
-      this.triggerEvent('change', {
-        value: name
+      // console.log('syncChildren', children, value)
+    },
+    initChildren() {
+      const children = this.getRelationNodes('../toggle/index');
+      this.setData({
+        children
       });
+      // console.log('initChildren', children)
     },
     updateRadios() {
       const children = this.getRelationNodes('../toggle/index');
-      console.log(children);
       const value = this.data.value;
       const radios = [];
       children.forEach((child) => {
@@ -65,8 +127,16 @@ Component({
     }
   },
   lifetimes: {
+    attached() {
+      // console.log('attached')
+      // 组件初始化时绑定事件
+    },
+    detached() {},
     ready() {
-      this.updateRadios();
-    }
+      // console.log('ready', this.data)
+      this.initChildren();
+      // console.log('ready')
+      // this.updateRadios();
+    },
   }
 })

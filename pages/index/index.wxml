@@ -46,7 +46,7 @@
       url="/pages/dashboard/index"
     />
   </van-cell-group>
-  <van-cell-group wx:for="{10}}" title="常用页面" inset>
+  <van-cell-group wx:for="{10}}"  wx:key="name" title="常用页面" inset>
     <van-cell
       is-link
       title="我的"

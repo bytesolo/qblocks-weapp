@@ -5,9 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    result1: ["1", "2"],
+    result2: ["2"],
+    items1: [{
+        name: "1",
+        label: "标签1"
+      },
+      {
+        name: "2",
+        label: "标签2"
+      },
+      {
+        name: "3",
+        label: "标签3"
+      }
+    ],
+    items2: [{
+        name: "1",
+        label: "标签4"
+      },
+      {
+        name: "2",
+        label: "标签5"
+      },
+      {
+        name: "3",
+        label: "标签6"
+      }
+    ]
   },
-
+  onChange(e) {
+    console.log(e.detail.value)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,5 +1,5 @@
 <!--components/qblocks/togglebutton-group/index.wxml-->
 <!-- <view class="{{ utils.bem('toggle-group', [direction]) }}"> -->
-<view class="qb-toggle-group" value="{{ toggle }}" bind:change="onChange">
+<view class="qb-toggle-group" value="{{ toggle }}">
   <slot></slot>
 </view>

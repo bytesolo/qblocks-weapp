@@ -1,5 +1,5 @@
 <!--components/qblocks/togglebutton/index.wxml-->
 <view class="qb-toggle {{selectedClass}}" bind:tap="onTap">
     <!-- <van-icon class="qb-toggle__icon" name="info-o" size="32rpx" color="#fff" /> -->
-    <text class="qb-toggle__text" size="32rpx">直吹风</text>
+    <text class="qb-toggle__text" size="32rpx">{{label}}</text>
 </view>

@@ -1,1 +1,5 @@
 /* pages/toggle/index.wxss */
+.panel1__content {
+  width: 100%;
+  margin: 16rpx 0;
+}

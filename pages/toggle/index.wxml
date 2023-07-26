@@ -1,6 +1,17 @@
 <!--pages/toggle/index.wxml-->
-<qb-toggle-group>
-  <qb-toggle></qb-toggle>
-  <qb-toggle></qb-toggle>
-  <qb-toggle></qb-toggle>
-</qb-toggle-group>
+<qb-panel title="多选">
+  <view slot="content" class="panel1__content">
+    <qb-toggle-group value="{{result1}}" multiple="{{true}}" bind:change="onChange">
+      <qb-toggle wx:for="{{items1}}" wx:key="name" name="{{item.name}}" label="{{item.label}}"/>
+    </qb-toggle-group>
+  </view>
+</qb-panel>
+
+<qb-panel title="单选">
+  <view slot="content" class="panel1__content">
+    <qb-toggle-group value="{{result2}}" bind:change="onChange">
+      <qb-toggle wx:for="{{items2}}" wx:key="name" name="{{item.name}}" label="{{item.label}}"/>
+    </qb-toggle-group>
+  </view>
+</qb-panel>
+

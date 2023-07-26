@@ -7,11 +7,13 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    name: String,
     icon: String,
     label: String,
     selected: {
       type: Boolean,
-      value: false
+      value: false,
+      observer: 'updateComponent'
     }
   },
   relations: {
@@ -39,15 +41,27 @@ Component({
    */
   methods: {
     onTap() {
+      const relationNodes = this.getRelationNodes('../toggle-group/index');
+      if (!relationNodes || relationNodes.length == 0) return;
+      const parent = relationNodes[0];
       let newStatus = !this.properties.selected;
       this.setData({
-        selected: newStatus,
-        selectedClass: newStatus ? "qb-toggle__selected" : ""
+        selected: newStatus
       });
 
-      this.triggerEvent('change', {
-        selected: newStatus
-      }, {});
+      // console.log(parent)
+      parent.onChildChange(this);
+      // parent.triggerEvent('childChanged', {
+      //   target: this,
+      //   selected: newStatus
+      // }, {});
+    },
+    updateComponent() {
+      // console.log('updateComponent')
+      let selected = this.properties.selected;
+      this.setData({
+        selectedClass: selected ? "qb-toggle__selected" : ""
+      });
     }
   }
 })
